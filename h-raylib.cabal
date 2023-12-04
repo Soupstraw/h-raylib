@@ -209,7 +209,6 @@ library
   elif (flag(platform-linux) || (flag(detect-platform) && os(linux)))
     extra-libraries:
       GL
-      c
       m
       pthread
       dl

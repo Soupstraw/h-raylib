@@ -1,4 +1,4 @@
-{ mkDerivation, base, c, containers, exceptions, lens, lib, libGL
+{ mkDerivation, base, containers, exceptions, lens, lib, libGL
 , libX11, libXcursor, libXext, libXi, libXinerama, libXrandr, raylib, ...
 }:
 mkDerivation {
@@ -12,7 +12,7 @@ mkDerivation {
   ];
   libraryHaskellDepends = [ base containers exceptions lens ];
   librarySystemDepends = [
-    c libGL libX11 libXcursor libXext libXi libXinerama libXrandr raylib
+    libGL libX11 libXcursor libXext libXi libXinerama libXrandr raylib
   ];
   description = "Raylib bindings for Haskell";
   license = lib.licenses.asl20;

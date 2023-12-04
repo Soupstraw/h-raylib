@@ -59,9 +59,7 @@
         packages = forAllSystems (system: let
           pkgs = pkgsForSystem system;
         in {
-          default = import ./default.nix (pkgs // pkgs.xorg // pkgs.haskellPackages // {
-            c = pkgs.stdenv.cc.libc;
-          });
+          default = import ./default.nix (pkgs // pkgs.xorg // pkgs.haskellPackages);
         });
       };
 }
